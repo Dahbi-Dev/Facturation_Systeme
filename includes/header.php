@@ -15,9 +15,10 @@ $username=$_SESSION['username'];
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Language" content="en">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>Dashboard | Ingeniva Invoice</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Dashboard | Km2h Factures</title>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
     <meta name="description" content="Build whatever layout you need with our Architect framework.">
     <meta name="msapplication-tap-highlight" content="no">
     <link rel="icon" href="assets/images/favicon.png" type="image/png">
@@ -32,18 +33,28 @@ $username=$_SESSION['username'];
     * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
     -->
 
-<link href="assets/css/dataTables.min.css" rel="stylesheet">
-<link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/dataTables.min.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
 
 </head>
+
 <body>
     <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
         <div class="app-header header-shadow">
-            <div class="app-header__logo"><table><tr><td><div><img src="assets/images/favicon.png"></div></td><td><h3 style="margin-top:4px; margin-left:-8px;">&nbsp;invoice</h3></td></tr></table>
-                
+            <div class="app-header__logo">
+                <table>
+                    <tr>
+                        <td>
+                            <div><img src="assets/images/km2h.png"></div>
+                        </td>
+
+                    </tr>
+                </table>
+
                 <div class="header__pane ml-auto">
                     <div>
-                        <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar">
+                        <button type="button" class="hamburger close-sidebar-btn hamburger--elastic"
+                            data-class="closed-sidebar">
                             <span class="hamburger-box">
                                 <span class="hamburger-inner"></span>
                             </span>
@@ -62,45 +73,54 @@ $username=$_SESSION['username'];
             </div>
             <div class="app-header__menu">
                 <span>
-                    <button type="button" class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
+                    <button type="button"
+                        class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
                         <span class="btn-icon-wrapper">
                             <i class="fa fa-ellipsis-v fa-w-6"></i>
                         </span>
                     </button>
                 </span>
-            </div>    <div class="app-header__content">
+            </div>
+            <div class="app-header__content">
                 <div class="app-header-left">
-                   
-                       </div>
+
+                </div>
                 <div class="app-header-right">
                     <div class="header-btn-lg pr-0">
                         <div class="widget-content p-0">
                             <div class="widget-content-wrapper">
                                 <div class="widget-content-left">
                                     <div class="btn-group">
-                                    <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="p-0 btn">
-                                            <img width="42" class="rounded-circle" src="assets/images/avatars/2.png" alt="">
+                                        <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                            class="p-0 btn">
+                                            <img width="42" class="rounded-circle" src="assets/images/avatars/2.png"
+                                                alt="">
                                             <i class="fa fa-angle-down ml-2 opacity-8"></i>
                                         </a>
-                                        
-                                        <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu dropdown-menu-right">
-                                        <a type="button" tabindex="0" href="mailsettings.php" class="dropdown-item">Mail Settings</a>
-                                        <a type="button" tabindex="0" href="changepassword.php" class="dropdown-item">Change Password</a>
-                                            <button type="button" data-toggle="modal" data-target="#logoutModal" tabindex="0" class="dropdown-item">Logout</button>
-                                          </div>
+
+                                        <div tabindex="-1" role="menu" aria-hidden="true"
+                                            class="dropdown-menu dropdown-menu-right">
+                                            <a type="button" tabindex="0" href="mailsettings.php"
+                                                class="dropdown-item">Mail Settings</a>
+                                            <a type="button" tabindex="0" href="changepassword.php"
+                                                class="dropdown-item">Change Password</a>
+                                            <button type="button" data-toggle="modal" data-target="#logoutModal"
+                                                tabindex="0" class="dropdown-item">Logout</button>
+                                        </div>
                                     </div>
                                 </div>
-                                
-                               <!-- <div class="widget-content-right header-user-info ml-3">
+
+                                <!-- <div class="widget-content-right header-user-info ml-3">
                                     <button type="button" class="btn-shadow p-1 btn btn-primary btn-sm show-toastr-example">
                                         <i class="fa text-white fa-calendar pr-1 pl-1"></i>
                                     </button>
                                 </div>  -->
                             </div>
                         </div>
-                    </div>        </div>
+                    </div>
+                </div>
             </div>
-        </div> 
+        </div>
         <!--       <div class="ui-theme-settings">
             <button type="button" id="TooltipDemo" class="btn-open-options btn btn-warning">
                 <i class="fa fa-cog fa-w-16 fa-spin fa-2x"></i>
@@ -382,24 +402,26 @@ $username=$_SESSION['username'];
         </div> -->
 
 
-        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">×</span>
-          </button>
+        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">Select <span class="text-danger">Logout</span> below if you are ready to end
+                        your current session.</div>
+                    <div class="modal-footer">
+                        <button class="btn btn-danger" type="button" data-dismiss="modal">Cancel</button>
+                        <form action="code.php" method="post">
+                            <button class="btn btn-primary" type="submit" name="logout_btn">Logout</button>
+                        </form>
+
+
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="modal-body">Select <span class="text-danger">Logout</span> below if you are ready to end your current session.</div>
-        <div class="modal-footer">
-             <button class="btn btn-danger" type="button" data-dismiss="modal">Cancel</button>
-            <form action="code.php" method="post">
-                <button class="btn btn-primary" type="submit" name="logout_btn" >Logout</button>
-            </form>
-         
-          
-        </div>
-      </div>
-    </div>
-  </div>

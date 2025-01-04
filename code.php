@@ -118,12 +118,12 @@ if(isset($_POST['registerbtn'])){
 
 	if ($query_run){
 
-		$_SESSION['SUCCESS'] = "Product/Service Added";
+		$_SESSION['SUCCESS'] = "Service Added";
 		header('location: product_display.php');
 
 	} else {
 
-		$_SESSION['Failure'] = "Product/Service Not Added";
+		$_SESSION['Failure'] = "Service Not Added";
 		header('location: product_display.php');
 	
 	}
@@ -142,12 +142,12 @@ if(isset($_POST['updatebtn'])){
 
 	if ($query_run){
 
-		$_SESSION['SUCCESS'] = "Product/Service Data Updated";
+		$_SESSION['SUCCESS'] = "Service Data Updated";
 		header('location: product_display.php');
 
 	} else {
 
-		$_SESSION['Failure'] = "Product/Service Data Not Updated";
+		$_SESSION['Failure'] = "Service Data Not Updated";
 		header('location: product_display.php');
 	
 	}
